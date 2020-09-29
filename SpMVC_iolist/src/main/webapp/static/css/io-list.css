@@ -1,0 +1,53 @@
+@charset "UTF-8";
+@import url("https://fonts.googleapis.com/css2?family=Nanum+Pen+Script");
+
+table#io-list {
+  border-collapse: collapse;
+  border-spacing: 0;
+  width: 90%;
+  box-shadow: 0 2px 2px rgb(153, 0, 102), 2px 0 2px rgb(153, 0, 102);
+  margin: 30px auto;
+}
+
+table#io-list th,
+table#io-list td {
+  border-bottom: 1px solid #ddd;
+  padding: 8px;
+  text-align: left;
+  vertical-align: top;
+}
+
+table#io-list td {
+  cursor: pointer;
+}
+
+table#io-list tr:nth-child(even) {
+  background-color: #f1f1f1;
+}
+
+table#io-list tr:nth-child(odd) {
+  background-color: #fff;
+}
+
+table#io-list tr:nth-child(n + 2):hover {
+  background-color: #ccc;
+}
+
+div#io-link-box {
+  width: 90%;
+  margin: 10px auto;
+  text-align: right;
+}
+
+div#io-link-box a {
+  display: inline-block;
+  padding: 10px 15px;
+  background-color: rgb(000, 000, 051);
+  color: white;
+  text-decoration: none;
+  border-radius: 5px;
+}
+
+div#io-link-box a:hover {
+  box-shadow: 3px 3px rgba(0, 0, 0, 0.3);
+}
