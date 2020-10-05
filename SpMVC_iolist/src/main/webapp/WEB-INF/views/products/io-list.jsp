@@ -50,7 +50,7 @@
 	</c:choose>
 </table>
 <div id="io-link-box">
-	<a href="${rootPath}/products/add">add</a>
+	<a href="${rootPath}/products/write">write</a>
 </div>	
 </body>
 </html>

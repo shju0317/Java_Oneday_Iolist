@@ -1,0 +1,62 @@
+@charset "UTF-8";
+
+form#products {
+  width: 60%;
+  margin: 10px auto;
+}
+
+form#products div {
+  width: 95%;
+  margin: 0 auto;
+
+  display: flex;
+}
+
+form#products label {
+  flex: 1;
+  text-align: right;
+  padding: 8px;
+  margin: 5px;
+}
+
+form#products input {
+  flex: 5;
+  border: 1px solid #ddd;
+  margin: 5px;
+  padding: 8px;
+
+}
+
+form#products fieldset {
+  border: 2px dashed rgb(102, 102, 153);
+  border-radius: 10px;
+  padding: 20px;
+}
+
+form#products fieldset legend {
+  font-size: 18px;
+  font-weight: bold;
+  color: rgb(051, 051, 153);
+  padding: 0px 10px;
+}
+
+form#products div.button-box {
+  justify-content: flex-end;
+}
+
+form#products button {
+  border: none;
+  outline: 0;
+  padding: 0.5rem 12px;
+  border-radius: 5px;
+}
+
+form#products button#btn-save {
+  background-color: rgb(000, 000, 051);
+  color: white;
+  padding: 0.5rem 25px;
+}
+
+form#products button:hover {
+  box-shadow: 3px 3px rgba(0, 0, 0, 0.3);
+}

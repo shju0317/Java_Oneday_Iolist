@@ -27,7 +27,7 @@
 		#{io_date},
 		#{io_time},
 		#{io_pname},
-		#{io_input},
+		#{io_inout},
 		#{io_price},
 		#{io_quan},
 		#{io_total}

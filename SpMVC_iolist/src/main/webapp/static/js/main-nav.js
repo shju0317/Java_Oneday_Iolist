@@ -23,8 +23,8 @@ $(function () {
       document.location.href = `${rootPath}/`;
     }else if(menu_id === "menu-list"){
       document.location.href = `${rootPath}/products/`;
-    }else if(menu_id === "menu-add-list"){
-      document.location.href = `${rootPath}/add/`;
+    }else if(menu_id === "menu-write-list"){
+      document.location.href = `${rootPath}/products/write`;
     }
   });
 });
