@@ -7,10 +7,12 @@
 
 	<select id="selectAll" resultType="ProductVO">
 		SELECT * FROM tbl_iolist
+		ORDER BY IO_DATE,IO_TIME
 	</select>
 	<select id="findById" resultType="ProductVO">
 		SELECT * FROM tbl_iolist
-		WHERE seq = #{seq}
+		WHERE IO_SEQ = #{seq}
+		ORDER BY IO_DATE,IO_TIME
 	</select>
 	<insert id="insert">
 		INSERT INTO tbl_iolist(
@@ -34,6 +36,9 @@
 		)
 	</insert>
 	<update id="update"></update>
-	<delete id="delete"></delete>
+	<delete id="delete">
+ 		DELETE FROM tbl_iolist
+		WHERE IO_SEQ = #{seq}
+	</delete>
 
 </mapper> 

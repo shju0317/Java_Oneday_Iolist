@@ -20,8 +20,11 @@ public class ProductVO {
 	private String io_date;	//	varchar2(10)
 	private String io_time;	//	varchar2(10)
 	private String io_pname;	//	nvarchar2(30)
-	private char io_inout;	//	char(1)
+	private boolean io_inout;	//	char(1)
 	private int io_price;	//	number
 	private int io_quan;	//	number
 	private int io_total;	//	number
+	
+	private int io_in_sum;
+	private int io_out_sum;
 }

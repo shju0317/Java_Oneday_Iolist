@@ -21,7 +21,8 @@ header {
   align-items: center;
 }
 
-header h1 {
+header p {
+  font-size: 40px;
   font-weight: 300;
   text-shadow: 0 2px 2px rgb(153, 0, 102), 2px 0 2px rgb(153, 0, 102);
 }

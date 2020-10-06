@@ -3,8 +3,11 @@
 <%@ taglib uri="http://java.sun.com/jsp/jstl/core"  prefix="c" %>
 <%@ taglib uri="http://www.springframework.org/tags/form" prefix="form"%>
 <c:set var="rootPath" value="${pageContext.request.contextPath}"/>   
-<link href="${rootPath}/static/css/io-write.css?ver=2020-10-05" rel="stylesheet"> 
-<script src="${rootPath}/static/js/io-write.js?ver=2020-10-05-001"></script>
+<link href="${rootPath}/static/css/io-write.css?ver=2020-10-06-004" rel="stylesheet"> 
+<script src="${rootPath}/static/js/io-write.js?ver=2020-10-06-008"></script>
+<script>
+
+</script>
 <form:form id="products" modelAttribute="productVO">
 	<fieldset>
 		<legend>상품정보 입력</legend>	
@@ -22,14 +25,15 @@
 		</div>
 		
 		<div><label for="io_inout">구분</label>
-		<form:input path="io_inout" placeholder="구분(i/o)"/>
+			<input type="radio" name="chk_io" value="I" checked>매입
+			<input type="radio" name="chk_io" value="O">매출
 		</div>
 		
-		<div><label for="io_price">단가</label>
+		<div><label for="io_price" id="io_price" >단가</label>
 		<form:input path="io_price" placeholder="단가"/>
 		</div>
 				
-		<div><label for="io_quan">수량</label>
+		<div><label for="io_quan" id="io_quan">수량</label>
 		<form:input path="io_quan" placeholder="수량"/>
 		</div>
 		

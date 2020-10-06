@@ -27,6 +27,13 @@ form#products input {
 
 }
 
+form#products input[type="radio"]{
+  border: 1px solid red;
+  margin: 5px -50px;
+  vertical-align: middle;
+  cursor: pointer;
+}
+
 form#products fieldset {
   border: 2px dashed rgb(102, 102, 153);
   border-radius: 10px;

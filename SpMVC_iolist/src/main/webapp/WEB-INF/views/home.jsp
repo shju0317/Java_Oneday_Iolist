@@ -9,7 +9,7 @@
 <meta charset="UTF-8" />
 <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 <title>Loo9</title>
-<link href="${rootPath}/static/css/index.css?ver=2020-10-05"
+<link href="${rootPath}/static/css/index.css?ver=2020-10-06-002"
 	rel="stylesheet" />
 <script src="https://code.jquery.com/jquery-latest.min.js"></script>
 <script>
@@ -20,7 +20,7 @@
 </head>
 <body>
 	<header>
-		<h1>Loo9</h1>
+		<p>Loo9</p>
 	</header>
 	<nav id="main-nav">
 		<ul>
