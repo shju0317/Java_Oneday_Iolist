@@ -60,7 +60,7 @@ public class ProductServiceImplV1 implements ProductService {
 
 	@Override
 	public int delete(long seq) {
-		// TODO Auto-generated method stub
+		
 		return  productDao.delete(seq);
 	}
 }

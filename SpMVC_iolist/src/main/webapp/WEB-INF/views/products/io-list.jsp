@@ -25,6 +25,7 @@
 			<th>매입합계</th>
 			<th>매출합계</th>
 			<th></th>
+			<th></th>
 		</tr>
 		<%
 			// 서버로부터 데이터를 수신하여 데이터가 없으면 "데이터 없음"이라고 표시
@@ -67,7 +68,7 @@
 
 						<td></td>
 						
-						<td><a href="javascript:void(0)" id="delete">삭제</a></td>
+						<td><a href="${rootPath}/products/delete?seq=${product.io_seq}" id="delete">삭제</a></td>
 					</tr>
 				
 				<c:if test="${i.last}">

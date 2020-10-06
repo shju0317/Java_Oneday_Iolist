@@ -8,9 +8,7 @@ $(function () {
 	  $(document).on("click", "div.product-select", function () {
 	  
 
-	    $.ajax({
-	    	data: total
-	    })
+	    $.ajax()
 	      .done(function (productVO) {
 	        // alert(JSON.stringify(productVO))
 
@@ -19,12 +17,12 @@ $(function () {
 	        $("#io_time").val(productVO.io_time);
 	        $("#io_pname").val(productVO.io_pname);
 	        
-	        $("#io_inout").val(chk);
+	        //$("#io_inout").val(chk);
 	        
 	        $("#io_price").val(productVO.io_price);
 	        $("#io_quan").val(productVO.io_quan);
 	        
-	        $("#io_total").val(total);
+	        //$("#io_total").val(total);
 	        
 	        
 	      })

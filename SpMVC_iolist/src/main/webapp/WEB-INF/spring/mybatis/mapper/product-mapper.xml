@@ -12,8 +12,8 @@
 	<select id="findById" resultType="ProductVO">
 		SELECT * FROM tbl_iolist
 		WHERE IO_SEQ = #{seq}
-		ORDER BY IO_DATE,IO_TIME
 	</select>
+	
 	<insert id="insert">
 		INSERT INTO tbl_iolist(
 		IO_SEQ,
