@@ -80,4 +80,37 @@ public class ProductsController {
 		productService.delete(long_seq);
 		return "redirect:/products";
 	}
+	
+	@RequestMapping(value="/update", method=RequestMethod.GET)
+	public String update(String seq, Model model) {
+		long long_seq = 0;
+		try {
+			long_seq = Long.valueOf(seq);
+		} catch (Exception e) {
+			return "view_error";
+		}
+		
+		// update할 데이터를 SELECT해오기
+		ProductVO productVO = productService.findById(long_seq);
+		
+		// update할 데이터를 model에 심기
+		model.addAttribute("ProductVO", productVO);
+		
+		// 입력폼 화면 열기
+		return "io-write";
+	}
+	
+	@RequestMapping(value="/update", method=RequestMethod.POST)
+	public String update(ProductVO productVO, Model model) {
+		log.debug("UPDATE POST Method");
+		log.debug(productVO.toString());
+		
+		productService.update(productVO);
+		
+		// 아래 두줄과 같은 의미
+		// return "redirect:/blog/view?seq=" + blogVO.getBl_seq();
+		// 수정이 완료되면 다시 detail view로 화면을 전환하기
+		model.addAttribute("seq", productVO.getIo_seq());
+		return "redirect:/products";
+	}
 }

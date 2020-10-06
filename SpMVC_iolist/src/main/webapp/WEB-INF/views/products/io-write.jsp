@@ -13,15 +13,15 @@
 		<legend>상품정보 입력</legend>	
 
 		<div><label for="io_date">일자</label>
-		<form:input path="io_date" placeholder="일자"/>
+		<form:input path="io_date" value="${productVO.io_date}" placeholder="일자"/>
 		</div>
 		
 		<div><label for="io_time">시각</label>
-		<form:input path="io_time" placeholder="시각"/>
+		<form:input path="io_time" value="${productVO.io_time}" placeholder="시각"/>
 		</div>
 		
 		<div><label for="io_pname">상품명</label>
-		<form:input path="io_pname" placeholder="상품명"/>
+		<form:input path="io_pname" value="${productVO.io_pname}" placeholder="상품명"/>
 		</div>
 		
 		<div>구분
@@ -30,11 +30,11 @@
 		</div>
 		
 		<div><label for="io_price" id="io_price" >단가</label>
-		<form:input path="io_price" placeholder="단가"/>
+		<form:input path="io_price" value="${productVO.io_price}" placeholder="단가"/>
 		</div>
 				
 		<div><label for="io_quan" id="io_quan">수량</label>
-		<form:input path="io_quan" placeholder="수량"/>
+		<form:input path="io_quan" value="${productVO.io_quan}" placeholder="수량"/>
 		</div>
 		
 		<div class="button-box">

@@ -14,7 +14,7 @@
 		WHERE IO_SEQ = #{seq}
 	</select>
 	
-	<insert id="insert">
+	<insert id="insert" parameterType="ProductVO">
 		INSERT INTO tbl_iolist(
 		IO_SEQ,
 		IO_DATE,
@@ -35,7 +35,19 @@
 		#{io_total}
 		)
 	</insert>
-	<update id="update"></update>
+	
+	<update id="update" parameterType="ProductVO">
+	UPDATE tbl_iolist SET
+		IO_DATE = #{io_date},
+		IO_TIME = #{io_time},
+		IO_PNAME = #{io_pname},
+		IO_INOUT = #{io_inout},
+		IO_PRICE = #{io_price},
+		IO_QUAN  = #{io_quan},
+		IO_TOTAL = #{io_total}
+	WHERE IO_SEQ = #{io_seq}
+	</update>
+	
 	<delete id="delete">
  		DELETE FROM tbl_iolist
 		WHERE IO_SEQ = #{seq}

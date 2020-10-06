@@ -67,7 +67,7 @@
 						</c:choose>
 
 						<td></td>
-						
+						<td><a href="${rootPath}/products/update?seq=${product.io_seq}" id="update">수정</a></td>
 						<td><a href="${rootPath}/products/delete?seq=${product.io_seq}" id="delete">삭제</a></td>
 					</tr>
 				
