@@ -6,7 +6,7 @@
 <link href="${rootPath}/static/css/io-write.css?ver=2020-10-09-003" rel="stylesheet"> 
 <script src="${rootPath}/static/js/io-write.js?ver=2020-10-06-002"></script>
 <script>
-	var rootPath = "${rootPath}"
+
 </script>
 <form:form id="products" modelAttribute="productVO">
 	<fieldset>

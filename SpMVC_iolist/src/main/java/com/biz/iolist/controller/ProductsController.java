@@ -12,6 +12,7 @@ import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.ModelAttribute;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
+import org.springframework.web.bind.annotation.RequestParam;
 
 import com.biz.iolist.model.ProductVO;
 import com.biz.iolist.service.ProductService;
@@ -38,6 +39,7 @@ public class ProductsController {
 		return "home";
 	}
 
+	
 	@Transactional
 	@RequestMapping(value = "/write", method = RequestMethod.GET)
 	public String input(Model model) {
@@ -81,8 +83,9 @@ public class ProductsController {
 		return "redirect:/products";
 	}
 	
+	
 	@RequestMapping(value="/update", method=RequestMethod.GET)
-	public String update(String seq, Model model) {
+	public String update(@ModelAttribute ProductVO productVO, @RequestParam("seq") String seq, Model model) {
 		long long_seq = 0;
 		try {
 			long_seq = Long.valueOf(seq);
@@ -91,17 +94,22 @@ public class ProductsController {
 		}
 		
 		// update할 데이터를 SELECT해오기
-		ProductVO productVO = productService.findById(long_seq);
+		productVO = productService.findById(long_seq);
 		
 		// update할 데이터를 model에 심기
 		model.addAttribute("ProductVO", productVO);
 		
+		model.addAttribute("BODY", "IO-WRITE");
+		
+
+
+		
 		// 입력폼 화면 열기
-		return "io-write";
+		return "/products/io-write";
 	}
 	
 	@RequestMapping(value="/update", method=RequestMethod.POST)
-	public String update(ProductVO productVO, Model model) {
+	public String update(@ModelAttribute ProductVO productVO, Model model) {
 		log.debug("UPDATE POST Method");
 		log.debug(productVO.toString());
 		

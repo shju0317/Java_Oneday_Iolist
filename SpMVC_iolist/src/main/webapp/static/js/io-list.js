@@ -1,7 +1,7 @@
 $(function () {
 	$("#delete").click(function(){
 		if(confirm("정말 삭제할까요?")){
-			document.location.href = "${rootPath}/products/delete?seq=${product.io_seq}"
+			document.location.href = `${rootPath}/products/delete?seq=${product.io_seq}`
 		}
 	})
 	
