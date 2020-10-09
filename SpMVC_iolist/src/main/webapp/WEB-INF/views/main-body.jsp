@@ -7,6 +7,7 @@
 		width: 100%;
 		height: 100%;
 		display: flex;
+		background-image: url("../src/main/webapp/static/image/main.jpg");
 	}
 	
 	section#main-body article{
@@ -20,7 +21,9 @@
 		width:70%;
 		height: 70%;
 		margin: 0 auto;
-		border: 1px solid blue;
+		padding: 10px;
+		font-size: 22px;
+		border: 2px solid rgb(102, 0, 150);
 		text-align: center;
 	}
 </style>

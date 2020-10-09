@@ -8,9 +8,21 @@
 <meta charset="UTF-8">
 <meta name='viewport' content='width=device-width, initial-scale=1'>
 <title>Loo9</title>
-<link href="${rootPath}/static/css/io-list.css?ver=2020-10-06-004"
+<link href="${rootPath}/static/css/io-list.css?ver=2020-10-09-001"
 	rel="stylesheet">
-<script src="${rootPath}/static/js/io-list.js?ver=2020-10-06-000"></script>
+<script>
+$(function () {
+	$("#delete").click(function(){
+		if(confirm("정말 삭제할까요?")){
+			document.location.href = "${rootPath}/products/delete?seq=${product.io_seq}"
+		}
+	})
+	
+	$("#update").click(function(){
+		document.location.href="${rootPath}/products/update?seq=${product.io_seq}"
+	})
+});
+</script>
 </head>
 <body>
 	<table id="io-list">
@@ -24,8 +36,7 @@
 			<th>수량</th>
 			<th>매입합계</th>
 			<th>매출합계</th>
-			<th></th>
-			<th></th>
+			<th colspan=3></th>
 		</tr>
 		<%
 			// 서버로부터 데이터를 수신하여 데이터가 없으면 "데이터 없음"이라고 표시
@@ -44,7 +55,15 @@
 						<td>${product.io_date}</td>
 						<td>${product.io_time}</td>
 						<td>${product.io_pname}</td>
-						<td>${product.io_inout}</td>
+						<c:choose>
+							<c:when test="${product.io_inout == true}">
+								<td>매입</td>
+							</c:when>
+							<c:otherwise>
+								<td>매출</td>
+							</c:otherwise>
+						</c:choose>
+						
 						<td>${product.io_price}</td>
 						<td>${product.io_quan}</td>
 						
@@ -76,6 +95,7 @@
 				<td colspan=7>  합계 </td>
 				<td>${product.io_in_sum}</td>
 				<td>${product.io_out_sum}</td>
+				<td colspan=3></td>
 				</c:if>
 				</c:forEach>
 				

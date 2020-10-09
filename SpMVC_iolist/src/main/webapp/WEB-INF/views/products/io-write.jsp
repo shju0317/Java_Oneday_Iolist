@@ -3,7 +3,7 @@
 <%@ taglib uri="http://java.sun.com/jsp/jstl/core"  prefix="c" %>
 <%@ taglib uri="http://www.springframework.org/tags/form" prefix="form"%>
 <c:set var="rootPath" value="${pageContext.request.contextPath}"/>   
-<link href="${rootPath}/static/css/io-write.css?ver=2020-10-06-001" rel="stylesheet"> 
+<link href="${rootPath}/static/css/io-write.css?ver=2020-10-09-003" rel="stylesheet"> 
 <script src="${rootPath}/static/js/io-write.js?ver=2020-10-06-002"></script>
 <script>
 
@@ -24,10 +24,11 @@
 		<form:input path="io_pname" value="${productVO.io_pname}" placeholder="상품명"/>
 		</div>
 		
-		<div>구분
+		<p id="radio-box">
+			<label>구분</label>
 			<input type="radio" name="io_inout" value=true checked="checked">매입
 			<input type="radio" name="io_inout" value=false>매출
-		</div>
+		</p>
 		
 		<div><label for="io_price" id="io_price" >단가</label>
 		<form:input path="io_price" value="${productVO.io_price}" placeholder="단가"/>

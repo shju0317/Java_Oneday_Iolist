@@ -9,7 +9,7 @@
 <meta charset="UTF-8" />
 <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 <title>Loo9</title>
-<link href="${rootPath}/static/css/index.css?ver=2020-10-06-002"
+<link href="${rootPath}/static/css/index.css?ver=2020-10-09-001"
 	rel="stylesheet" />
 <script src="https://code.jquery.com/jquery-latest.min.js"></script>
 <script>

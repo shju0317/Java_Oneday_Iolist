@@ -3,6 +3,7 @@
 form#products {
   width: 60%;
   margin: 10px auto;
+  font-size: 20px;
 }
 
 form#products div {
@@ -27,9 +28,22 @@ form#products input {
 
 }
 
+#radio-box{
+	margin: 5px;
+	margin-inline-start: 130px;
+	margin-inline-end: 50px;
+}
+
+#radio-box label{
+	margin-right: 10px;
+}
+
+#radio-box input{
+	margin-left:10px;
+	text-align:right;
+}
+
 form#products input[type="radio"]{
-  border: 1px solid red;
-  margin: 5px -50px;
   vertical-align: middle;
   cursor: pointer;
 }
