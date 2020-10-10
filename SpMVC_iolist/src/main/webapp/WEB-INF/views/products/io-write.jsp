@@ -39,7 +39,7 @@
 		</div>
 		
 		<div class="button-box">
-			<button id="btn-save" type="button">저장</button>
+			<button id="btn-save" type="button">save</button>
 		</div>
 		
 	</fieldset>

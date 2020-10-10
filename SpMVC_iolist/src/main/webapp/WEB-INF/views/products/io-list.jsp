@@ -11,17 +11,19 @@
 <link href="${rootPath}/static/css/io-list.css?ver=2020-10-09-001"
 	rel="stylesheet">
 <script>
-$(function () {
-	$("#delete").click(function(){
-		if(confirm("정말 삭제할까요?")){
-			document.location.href = "${rootPath}/products/delete?seq=${product.io_seq}"
-		}
+$(function(){
+	$("button#update").click(function(){
+		let seq = $(this).data("seq")
+		document.location.href="${rootPath}/products/update/" + seq
 	})
 	
-	$("#update").click(function(){
-		document.location.href="${rootPath}/products/update?seq=${product.io_seq}"
+	$("button#delete").click(function(){
+		if(confirm("정말 삭제할까요?")){
+		let seq = $(this).data("seq")
+		document.location.replace("${rootPath}/products/delete/" + seq)
+	}
 	})
-});
+})
 </script>
 </head>
 <body>
@@ -86,7 +88,7 @@ $(function () {
 						</c:choose>
 
 						<td></td>
-						<td><a href="${rootPath}/products/update?seq=${product.io_seq}" id="update">수정</a></td>
+						<td><a href="${rootPath}/products/update?seq=${product.io_seq}" id="update" data-seq="${productVO.io_seq}">수정</a></td>
 						<td><a href="${rootPath}/products/delete?seq=${product.io_seq}" id="delete">삭제</a></td>
 					</tr>
 				

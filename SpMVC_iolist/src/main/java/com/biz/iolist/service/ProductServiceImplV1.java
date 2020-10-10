@@ -42,9 +42,8 @@ public class ProductServiceImplV1 implements ProductService {
 	}
 
 	@Override
-	public ProductVO findById(Long id) {
-		// TODO Auto-generated method stub
-		return null;
+	public ProductVO findById(Long seq) {
+		return productDao.findById(seq);
 	}
 
 	@Override
@@ -54,8 +53,7 @@ public class ProductServiceImplV1 implements ProductService {
 
 	@Override
 	public int update(ProductVO vo) {
-		// TODO Auto-generated method stub
-		return 0;
+		return productDao.update(vo);
 	}
 
 	@Override

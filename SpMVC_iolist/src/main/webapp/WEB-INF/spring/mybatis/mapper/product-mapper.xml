@@ -45,7 +45,7 @@
 		IO_PRICE = #{io_price},
 		IO_QUAN  = #{io_quan},
 		IO_TOTAL = #{io_total}
-	WHERE IO_SEQ = #{io_seq}
+	WHERE IO_SEQ = #{seq}
 	</update>
 	
 	<delete id="delete">
